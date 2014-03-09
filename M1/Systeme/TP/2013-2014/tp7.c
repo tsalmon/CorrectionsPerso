@@ -286,14 +286,19 @@ void ex3_1(){
 
 	//child fork
 	if(p == 0){		
-		char c[5];
+		char *c;
 
 		sleep(10);
 		
+		if((c = calloc(1, sizeof(pid_t))) == NULL){
+			perror("calloc");
+			exit(EXIT_FAILURE);
+		}
+
 		//on recopie le pid dans un buffer;
-		c[4] = 0;
 		snprintf(c, sizeof(c), "%d", getpid());
 		memcpy(projection, c, finfo.st_size);	
+		free(c);
 		exit(EXIT_SUCCESS);		
 	}
 	//dady
