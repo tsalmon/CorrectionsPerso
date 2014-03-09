@@ -202,7 +202,6 @@ class Fenetre extends JFrame
 	aide.add(item[10]);
 
 	fichier.setMnemonic(KeyEvent.VK_F);	
-	edition.setMnemonic(KeyEvent.VK_E);
 	aide.setMnemonic(KeyEvent.VK_H);
 	
 	this.menuBar.add(fichier);

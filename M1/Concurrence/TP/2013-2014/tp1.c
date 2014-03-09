@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <pthread.h>
+
 #define TRUE 1
 #define FALSE 0
+
 #define BOOL_STR(var) ((var == 1) ? "true" : "false")
 volatile int drapeau = 1; 
 volatile int variable = 0;

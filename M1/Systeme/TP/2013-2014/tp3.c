@@ -1,6 +1,6 @@
 /*
-  Note du correcteur : je n'ai pas fais la question 2.3, ni le 3
- */
+  Note du correcteur : je n'ai pas fais la question 2.3
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h> 
@@ -94,7 +94,32 @@ void ex2(int argc, char *argv[]){
   free(exo_arg);
 }
 
-void ex3(int argc, char *argv[]){}
+void ex3(int argc, char *argv[]){
+  int status;
+  char *arg[] = {NULL};
+  if(argc < 4 || argc > 5){
+    puts("need arguments <condition> <cmd> [<cmd>]");
+    return ;
+  }
+  switch(fork()){
+  case -1:
+    perror("fork");
+    exit(1);
+  case 0:
+    execlp(argv[2], "", NULL);
+    exit(0);
+  default:
+    if(wait(&status) == -1){
+      perror("wait");
+      exit(1);
+    }
+    if(status == 256 && argc == 5){
+      execlp(argv[4], "", NULL);
+    } else if(status == 0){
+      execlp(argv[3], "", NULL);
+    }
+  }
+}
 
 int main(int argc, char *argv[]){
   

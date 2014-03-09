@@ -1,0 +1,25 @@
+void voiture(){
+	while(TRUE){
+		Print "je veux entrer par le nord"
+		while(TRUE){
+			LOCK(Mutex)
+			IF(D==0){
+				Nvoit++
+				UNLOCK(MUTEX)
+				BREAK
+			} ELSE IF(Nvoit == 0){
+				D = 0
+				Nvoit++
+				UNLOCK(MUTEX)
+				BREAK
+			} ELSE {
+				UNLOCK(MUTEX)
+			}
+		}
+		PRINT "Je suis sur le pont"
+		LOCK(MUTEX)
+		Nvoit--
+		UNLOCK(Mutex)
+		PRINT "Je sors du pont"
+	}
+}

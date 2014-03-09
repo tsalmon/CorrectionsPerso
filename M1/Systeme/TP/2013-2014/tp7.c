@@ -91,7 +91,7 @@ void ex2_1(const int argc, const char *argv[]){
         exit(EXIT_FAILURE);
     }
     if(fstat(fd, &finfo)< 0){
-        perror("fstat");
+        perror("fstat");	
         if(close(fd)){
         	perror("close");
         }
@@ -202,12 +202,12 @@ void ex2_2(const int argc, const char *argv[]){
 		exit(EXIT_FAILURE);
 	}
 
-	if ((projection2 = mmap(0, 
-							finfo2.st_size, 
-							PROT_READ | PROT_WRITE,
-							MAP_SHARED, 
-							fd2, 
-							0)) 
+	if ((projection2 = mmap(0,
+						finfo2.st_size, 
+						PROT_READ | PROT_WRITE,
+						MAP_SHARED, 
+						fd2, 
+						0)) 
 		== MAP_FAILED){
 		
 		perror("mmap (fichier 2)");
@@ -288,7 +288,7 @@ void ex3_1(){
 	if(p == 0){		
 		char c[5];
 
-		sleep(=&à);
+		sleep(10);
 		
 		//on recopie le pid dans un buffer;
 		c[4] = 0;
@@ -366,7 +366,7 @@ int main(const int argc, const char * argv[]){
 	sa.sa_flags = SA_RESETHAND;
 	sigemptyset(&(sa.sa_mask));
 	if(sigaction(SIGSEGV, &sa, NULL)){
-			perror("sigaction");
+		perror("sigaction");
 		exit(EXIT_FAILURE);
 	}
 	if(sigaction(SIGINT, &sa, NULL)){
@@ -379,6 +379,7 @@ int main(const int argc, const char * argv[]){
 	} else if(!strcmp(argv[1], "2")){
 		if(argc < 3){
 			fprintf(stderr, "Donnez une question a faire <int>\n");
+			return 1;
 		} else if(!strcmp(argv[2], "1")){
 			ex2_1(argc, argv);
 		} else if(!strcmp(argv[2], "2")){
@@ -386,10 +387,12 @@ int main(const int argc, const char * argv[]){
 		} else {
 			fprintf(stderr, "La question donnée, "
 							"pour l'exerice 2, n'existe pas\n");
+			return 1;
 		}
 	} else if(!strcmp(argv[1], "3")){
 		if(argc < 3){
 			fprintf(stderr, "Donnez une question a faire <int>\n");
+			return 1;
 		} else if(!strcmp(argv[2], "1")){
 			ex3_1();
 		} else if(!strcmp(argv[2], "2")){
@@ -397,9 +400,11 @@ int main(const int argc, const char * argv[]){
 		} else {
 			fprintf(stderr, "La question donnée, "
 							"pour l'exerice 3, n'existe pas\n");
+			return 1;
 		}
 	}  else {
 		fprintf(stderr, "Exercice inconnu\n");
+		return 1;
 	}
     return 0;
 }
