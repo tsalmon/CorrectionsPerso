@@ -1,0 +1,50 @@
+%Linux : pour generer et afficher le pdf en ligne de commande : pdflatex examen.tex && evince evince.pdf
+% Mac et Windows: utiliser texmaker
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage{algpseudocode}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[francais]{babel}
+
+\title{Correction de l'examen d'Algorithmique}
+\author{Thomas Salmon}
+\date{10/03/2014}
+
+\begin{document}
+\maketitle
+\section{Exercice 1 Diviser pour régner}
+\subsection{Algorithme}
+\begin{algorithmic}
+\Function{Ex1}{tab: tableau d'entiers}
+\If {$taille(tab) = 2$}
+	\If {$tab[0] > tab[1]$}
+	
+		\State \Return $[tab[1], tab[0]]$
+	\Else
+	
+		\State \Return $[tab[0], tab[1]]$
+	\EndIf
+\ElsIf {$taille(tab) = 1$}
+	\State \Return $[tab[0]]$
+\ElsIf {$taille(tab) = 0$}
+	\State \Return $[]$
+\Else
+\State $t1\gets Ex1(tab[0, \dots, taille(tab)/2]$
+\State $t2\gets Ex1(tab[taille(tab)/2, \dots, taille(tab)]$
+\State $min_v \gets  min(t1+t2)$
+\State	$max_v \gets max(t1+t2)$
+\State \Return $[min_v, max_v]$
+\EndIf
+\EndFunction
+\end{algorithmic}
+\subsection{Complexité}
+\begin{math}
+	
+\end{math}
+\subsection{Justification}
+
+\end{document}
