@@ -1,5 +1,5 @@
-%Linux : pour generer et afficher le pdf en ligne de commande : pdflatex examen.tex && evince evince.pdf
-% Mac et Windows: utiliser texmaker
+% Pour generer et afficher le pdf en ligne de commande : pdflatex examen.tex && evince evince.pdf
+% Ou utiliser texmaker
 
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -42,9 +42,43 @@
 \EndFunction
 \end{algorithmic}
 \subsection{Complexité}
-\begin{math}
-	
-\end{math}
+On rappel l'équation du Master Theorem:
+
+$T(n) = aT(\frac{n}{b}) + f(n)$
+
+Dans cet algorithme, on coupe a chaque fois - qu'il contient plus de deux élèments - 
+
+le tableau en deux sous-parties ($a = 2$).
+
+Chacune de ces parties a donc pour taille la moitié du tableau ($b = 2$).
+
+les méthodes $min$ et $max$ sont de complexité $O(n)$, ce sont les seules itérations que l'on fait 
+
+dans notre algo (en dehors des recursions) ($f(n) = O(n)$).\\
+
+On a donc l'équation: 
+
+$T(n) = 2T(\frac{n}{2}) + O(n)$\\
+
+On rappel l'égalité
+
+$log_2(X) = \frac{ln(X)}{ln(2)}$\\
+
+Donc $log_2(2) = 1$
+
+$f(n) = O(n^c), c = 1$
+
+Ainsi $log_2(2) = c$, donc nous sommes dans le cas 2
+
+$T(n) = \Theta(n^c log^k(n))$
+
+$T(n) = \Theta(n.log(n))$
 \subsection{Justification}
+
+Ce programme renvoit  un coupe de valeur si il y a au moins 2 élèments dans le tableaux, 
+
+cependant il faut l'appeller avec une autre fonction pour renvoyer une erreur si il y en a 
+
+moins ou pas.
 
 \end{document}
