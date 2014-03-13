@@ -1,0 +1,88 @@
+%pour generer et afficher le pdf en ligne de commande : pdflatex td1.tex && evince td1.pdf
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[]{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[francais]{babel}
+
+\title{Correction du TD5 d'Algorithmique Avancée}
+\author{Thomas Salmon}
+\date{06/02/2014}
+
+\begin{document}
+\maketitle
+\section{Exercice 1}
+\begin{description}
+    \item[Acte juridique] 
+		\begin{description}
+    		\item[]
+		    \item[Fait juridique] Un événement qui crée, transmet ou éteint un droit sans qu'une personne n'ait voulu ce résultat.
+		\end{description}
+    \item[Fait juridique] Un événement qui crée, transmet ou éteint un droit sans qu'une personne n'ait voulu ce résultat.
+\end{description}
+
+\begin{tabular}{ll}
+Montrons que \textbf{(axiome strict} " & $\Leftrightarrow$ \textbf{axiome large}\\
+												              &  $\Leftarrow$ trivial\\
+\end{tabular}
+
+
+\begin{description}
+    \item[Montrons $\Rightarrow$] 
+		\begin{description}
+    		\item[]
+		    \item[] soit I et J tels que $|J| > |I|$
+			\item[] soit $J' \in J$ et $|J'| = 1 + |J|$
+		\end{description}
+    \item[] On applique l'\textbf{axiome strict}
+    \item[] 
+    	\begin{description}
+			\item[] $\exists x \in J' - I$  tel que $I + x \in \mathcal{I}$ 	
+			\begin{description}
+				\item[]
+				\item[] $\Rightarrow x \in J - I CQFD$
+			\end{description}
+    	\end{description}
+\end{description}
+
+\section{Exercice 2}
+Supposons qu'il existe 2 bases $B$ et $B'$ avec $|B| > |B'|$
+
+\textbf{axiome large} $\Rightarrow \exists x \in B - B' $ tel que $B' + x$ est indépendant mais
+
+$B' \nsubseteq  B' + x $ ce qui contredit la maximalité de $B$ 
+\section{Exercice 3}
+Matrice sur $\{0, 1\}$
+
+\begin{tabular}{| l | l | l | l |}
+  \hline
+  0 & 1 & 1 & 0\\
+  0 & 1 & 0 &  1\\
+  0 & 0 & 1 & 1\\
+  \hline
+	  $c_1$ & $c_2$ & $c_3$ & $c_4$ \\
+  \hline
+\end{tabular}
+
+$\{c_1, c_2, c_3, c_4\}$ n'est pas indépendant
+
+$c_2 + c_4 = c_3$
+
+$\{c_2, c_4\}$ est indépendant
+
+$\{c_1, c_2, c_4\} $est une base
+
+\subsection{}
+Heredité : (axiome 1) :
+Supposons que $I' \in I$ non indépendant
+
+$\exists c \in I' $ tel que $ c = \sum_{c_i \in I'}^{} \alpha_i.c_i  $ avec $c_i \in \mathbb{K}$	
+
+cette somme est vrai dans $\mathcal{I}$
+
+I n'est pas indépendant
+\end{document}
