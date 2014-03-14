@@ -3,7 +3,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper]{geometry}
-%\usepackage[]{algorithm2e}
+\usepackage[]{algorithm2e}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{mathtools}
@@ -21,11 +21,11 @@ Recherche par dichotomie $O(log(n))$
 \subsection{}
 On commence par essayer de jeter le vase du 1er étage, puis du second, et ainsi de suite jusqu'a ce que le vase se brise $O(n)$
 \subsection{}
-On découpe les étages en intervalles, On essaye de lancer un vase depuis chaque premier étage de ces intervalles, jusqu'a ce qu'on brise un vase, alors, on prend le dernier intervalle et on teste linéairement chacun des étages jusqy'a ce que l'on casse le second vase $O(\frac{n}{x}+p)$ ou $x$ est la taille d'un intervalles  
+On découpe les étages en intervalles, On essaye de lancer un vase depuis chaque premier étage de ces intervalles, jusqu'à ce qu'on brise un vase, alors, on prend le dernier intervalle et on teste linéairement chacun des étages jusqu'à ce que l'on casse le second vase $O(\frac{n}{x}+p)$ ou $x$ est la taille d'un intervalles (tous les intervalles font la même taille)  
 
 Comment choisir ces intervalles ? 
 
-Il faut se servir des dérivés: trouver $x$ tel que $\frac{n}{x}+x = 0$ (il faut le choisir de façon a minimiser le temps que prendre de casser le vases et également de minimiser le temps que prendre de casser le deuxième) \\
+Il faut se servir des dérivés: trouver $x$ tel que $\frac{n}{x}+x = 0$ (il faut le choisir de façon à minimiser le temps de casser le 1er vases et également de minimiser le temps que prend de casser le deuxième) \\
 
 \begin{math}
   \frac{d.(\frac{n}{x}+x)}{dx} \Rightarrow \frac{-n}{x^2} + 1 = 0 \Rightarrow n = x^2 \Rightarrow \sqrt{n} = x
@@ -57,8 +57,10 @@ k $ vases $ \rightarrow k\sqrt[k]{n}
 Le parralelisme n'apporte pas vraiment de solution au problème
 
 \section{Exercice 2. Boulons}
-Pour chaque écrou $e$, on va comparer un ensemble de vis, on met dans un ensemble $V_1$, les vises qui sont trop petites pour l'écrou $e$, et dans l'ensemble $V_2$, celles qui sont trop grandes\\
-Puis on prend la bonne vise $v$ qui convient a notre écrou, et on lui fait comparer un ensemble d'écrous, on met dans l'ensemble $E_1$, les écrous qui sont trop petis, et dans $E_2$, ceux qui sont trop grands, et on recommence toute l'opération depuis le debut pour chaque sous ensemble en prenant ($E_1, V_1$) et ($E_2, V_2$)
+Pour chaque écrou $e$, on va comparer un ensemble de vis, on met dans un ensemble $V_1$, les vises qui sont trop petites pour l'écrou $e$, et dans l'ensemble $V_2$, celles qui sont trop grandes
+
+
+Puis on prend la bonne vis $v$ qui convient a notre écrou, et on lui fait comparer un ensemble d'écrous, on met dans l'ensemble $E_1$, les écrous qui sont trop petis, et dans $E_2$, ceux qui sont trop grands, et on recommence toute l'opération depuis le debut pour chaque sous ensemble en prenant ($E_1, V_1$) et ($E_2, V_2$)
 
 La i-eme vis est composé avec le j-eme ecrou (proba : $\frac{1}{j-1}$) ou, la j-eme vise est composé avec le ieme écrou(proba : $\frac{1}{j-1}$), ($i$ et $j$ dans l'ordre des tailles qui est inconnu)
 
