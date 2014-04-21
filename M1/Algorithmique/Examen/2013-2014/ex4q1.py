@@ -3,6 +3,9 @@ Ce probleme correspond a celui du sac a dos
 Pour faire toutes les combinaisons possible des elements de E afin d'obtenir V, 
 on va prendre les elements un par un, et a chaque fois on ajoute les nouvelles combinaisons
 parmi celles qu'on a deja ajoute en leur additionnant la valeur du nouvel element
+
+Pour la 4e question de l'exercice il suffit de changer le sens (+1) de la boucle j
+
 """
 def possible(E, V):
 	p = [[False] * (V+2) for i in E]
@@ -14,7 +17,7 @@ def possible(E, V):
 			for k in range(i, len(E)):
 				p[k][X] = True
 
-		for j in range(V-1, 1, -1):
+		for j in range(V-1, 1, -1): # boucle j
 			if (p[i][j] == True) and (j != X) and (X + j <= V):
 				for k in range(i, len(E)):
 					p[k][j+X] = True
