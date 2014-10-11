@@ -1,0 +1,107 @@
+Notes: pas de documents a l'examen, pas cours la semaine prochaine
+
+
+Quizz:
+Quel est le premier principe de conception par
+abstraction ?
+concevoir par interface
+
+Quelle est l?expression SQL d?une jointure naturelle 
+entre deux tables RA(C1,C2) RB(C2,C3) ?
+
+
+Quel est l'opérateur SQL utilisé pour r?aliser les 
+jointures ? 
+SELECT
+
+A quoi correspond cette ic?ne ? 
+Jointure
+
+En quelles opérations peut on d?composer l?
+opération de jointure ?
+
+Quelle est l?op?ration inverse de la jointure ?
+Projection
+
+Qui sont les inventeurs de Junit??
+
+
+Quelle est la traduction fran?aise de 
+??implementation?? ?
+mise en oeuvre
+
+Quel opérateur enlève des lignes ?
+DELETE
+
+Quel op?rateur enl?ve des colonnes ?
+
+
+Quel op?rateur multiplie le nombre de lignes et 
+additionne le nombre de colonnes de deux tables ?
+produit cartésieux
+
+A quoi correspond ce pictogramme  ?
+
+Dans quelle étape du cycle de vie d?une base de
+donn?es d?finit on les index ?
+
+
+Dans quelle ?tape du cycle de vie d?une base de 
+donn?es a lieu la normalisation des tableles ?
+
+
+A quoi correspond ce pictogramme  ? 
+carte de Dora
+
+De quel mot français vient la désignation anglo-
+saxonne d'un fichier ?
+file
+
+Quel mécanisme physique est remplacé par l'abstraction <<table>> ?
+pointeur
+
+Qu?est ce que la <<lava flow>>?
+anti pattern
+
+Quelles sont les zones d?adressage d?un
+programme ?
+le tas, la pile, stack
+
+Quelle est l'unité d'organisation d'un fichier plat ?
+record
+
+Quelle la signification du trigramme API ?
+
+
+D?apr?s LightStones quelles sont les phases du 
+cycle de vie d?une base de donn?es ?
+physical, logique, data, business, interface
+
+De quel livre est tir?e cette citation ?program to an 
+interface, not an implementation? ?
+GOF
+
+Qui est-ce ? 
+un type du gof
+
+Quelle méthode est décrite dans le livre de Kent 
+BECK ?
+xp
+
+Quel est le nom de la m?thode de test d'égalité de Junit ?
+assert_equal
+
+Quel type de tests sont r?alis?s avec Junit ?
+tests unitairs
+
+Quel m?canisme Java est utilis? dans la version 4  
+de Junit ?
+
+
+Que signifie le sigle COBOL ?
+Common Business Oriented Language
+
+Qu'évoque cette figure??
+interface
+
+Dans quel livre se trouve cette figure ?
