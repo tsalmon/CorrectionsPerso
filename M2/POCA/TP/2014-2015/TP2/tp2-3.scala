@@ -56,7 +56,6 @@ abstract class SimpleHashTable extends HashTable {
 			return Option(data(hash)(0)._2)
 		}
 		return null;
-		/* ? */ 
 	}
 }
 

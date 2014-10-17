@@ -1,0 +1,88 @@
+Logique temporelle propositionnelle linéaire (LTL)
+Le but est d'empecher d'avoir 2 personnes dans une session critique d'un programme, et d'exprimer cet contrainte logiquement
+Proposition: ensemble de propositions atomiques, ce sont des cas particuliers de formules
+
+
+F ::= p in Prop | non F | F ou F | (next) F | F_1 (until) F_2
+
+F = Phi : une formule
+next = grand O complexe : le prochaine F sera vrai
+until = grand U : F_1 est tout le temps vrai, F_2 sera vrai au bout d'un certain temps
+
+Dans un automate chainé :  ( ) -> ( ) -> ( ) -> ...
+on va marqué dans chaque noeud (qui represente un instant temporelle), les propositions vraies a cet instant
+
+(a, b)    ->    (b, c)    ->   ... 
+  |                |
+  v                v
+a, b vrais       b, c vrais
+a cet instant
+
+
+e = espilon
+N = entier naturel
+
+e:N -> P(prop)
+
+e(i) : l'ensemble des propositions atomiques qui sont vraies au point i de la sequence e
+
+e, i |= F
+
+e, i |= p 			ssi p in e(i)
+e, i |= non F 		ssi e, i |≠ F
+e, i |= F1 ou F_2	ssi e, i |= F1 ou e, i |= F2
+e, i |= O F   		ssi e, i+1 |= F
+e, i |= F1 until F2 ssi il existe j ≥ i tq (e, j |= F2 et pour tout k i ≤ k < j => e,k |= F1)
+
+<>F = vrai (until) F    = inevitablement F sera vraie dans le futur
+(square) F = non <> non F 			toujours F
+
+
+On a 2 automates comme celui ci (avec alt 1/util 1 et un 2 ci dessous)
+
+			_		
+		   / \
+		  |   |   alt 2
+	       \ /
+		    -
+obtenir   |   ^
+ ress 	  v   |
+			_		
+		   / \
+	      |   | util 2
+	       \ /
+			-
+
+Exclusion mutuelle : Alt 1 & Alt 2 = (square) (non (utile1 & utile 2))
+
+					Alt2 & Alt 1 => (non utile 1 ou non util2)
+
+Notes: e |= F equivaut a e, o |= F
+
+Systeme	M = (Q, PI, g)
+
+Q = ensemble d'etats:
+PI = Q -> P(prop)
+g in strict Q x Q
+
+Traces(M, q) = {  PI(q_o) PI(q_1) ... | q_0 q_1}
+
+M, q |= F ssi pour tout e in Traces(q), e |= F
+
+Propriété de sûreté:
+Toute action fait laisse le systeme dans un ensemble d'état "bons", Jamais quelque chose de mauvais n'arrive"
+
+Une proprité de sureté est un invariant tout le temps vrai
+
+
+Infiniment souvent p :  (p) -> () -> () -> (p) -> () -> ...
+square <> p
+
+un nombre fini de p:
+<> square non p
+
+
+square(p => <>q) : si quelqu'un appui sur le bouton j'ouvre la porte
+Si p alors q sera vrai dans le futur
+Si q alors p devrait etre vrai dans le passé ?
+je ne peux pas voir q sans avoir deja vu p

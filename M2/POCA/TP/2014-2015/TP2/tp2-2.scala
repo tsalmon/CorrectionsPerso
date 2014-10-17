@@ -27,9 +27,6 @@ object HelloWorld{
 	}
 
 	def main(args: Array[String]){
-		//helloFor(args);
-		//helloWhile(args);
-		println(helloRecFunc(args, args.length-1));
 	}
 }
 

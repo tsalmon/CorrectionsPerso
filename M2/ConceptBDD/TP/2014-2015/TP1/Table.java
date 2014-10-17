@@ -82,49 +82,43 @@ class Table<T>{
 		return this.items.toString();
 	}
 
-	public static void main(String args[]){
-		BufferedReader br = null;
+	static public final String[] tableFromFile(String fileName){
+		BufferedReader br = null;		
+		String buffer = "";
 		try {
-			br = new BufferedReader(new FileReader("file.txt"));
-			try {
-				StringBuilder sb = new StringBuilder();
-				String line = "";
-				try {
-					line = br.readLine();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-				while (line != null) {
-					sb.append(line);
-					sb.append(System.lineSeparator());
-					try {
-						line = br.readLine();
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
-				String everything = sb.toString();
-			} finally {
-				try {
-					br.close();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+ 
+			String sCurrentLine;
+			try{
+				br = new BufferedReader(new FileReader(fileName));
+			} catch(FileNotFoundException excfile){
+				System.err.println("le fichier " + fileName + " n'existe pas");
+				return null;
 			}
-		}
-		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			while ((sCurrentLine = br.readLine()) != null) {
+				buffer += sCurrentLine + '\n';
+			}
+			return buffer.split("\n");
+			
+		} catch (IOException e) {
 			e.printStackTrace();
-		}
-
-		String [] c1 = {"A", "Z", "G", "J", "U", "K", "E", "B", "V", "D"};
-		String [] c2 = {"B", "U", "Z", "K", "X", "V", "N", "L", "M", "E"};
-		Table<String> t1 = new Table<String>(c1);
-		Table<String> t2 = new Table<String>(c2);
-		System.out.println(t1.join(t2));
+		} finally {
+			try {
+				if (br != null)br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}		
+		return null;
+ 	}
+	
+	public static void main(String args[]){
+		String[] r = tableFromFile(args[0]);
+		String[] s = tableFromFile(args[1]);
+		
+		Table<String> t1 = new Table<String>(r);
+		Table<String> t2 = new Table<String>(s);
+		System.out.println(t1);
+		System.out.println(t2);
+		System.out.println(t1.join(t2));		
 	}
 }
