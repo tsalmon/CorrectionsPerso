@@ -85,4 +85,4 @@ un nombre fini de p:
 square(p => <>q) : si quelqu'un appui sur le bouton j'ouvre la porte
 Si p alors q sera vrai dans le futur
 Si q alors p devrait etre vrai dans le passé ?
-je ne peux pas voir q sans avoir deja vu p
+je ne peux pas voir q sans avoir deja vu p  
