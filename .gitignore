@@ -1,3 +1,6 @@
+#Eclipse
+.metadata
+
 # Android
 *.apk
 *.ap_
