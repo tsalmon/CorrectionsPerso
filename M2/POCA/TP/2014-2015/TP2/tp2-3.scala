@@ -61,6 +61,7 @@ abstract class SimpleHashTable extends HashTable {
 
 object Test{
 	def main (args :Array[String]) = {
+		// on cree une sous classe de SimpleHashTable
 		val t = new SimpleHashTable {
 			type K = String ;
 			type V = String ;

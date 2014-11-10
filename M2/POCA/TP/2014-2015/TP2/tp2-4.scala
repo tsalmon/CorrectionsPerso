@@ -1,25 +1,21 @@
-abstract class Document	{
-	def num_enregistrement : Int;
-	def titre: String;
+abstract class Document	(_titre: String, _num_enregistrement : Int) {
+	val num_enregistrement : Int = _num_enregistrement;
+	val titre: String = _titre;
 }
 
-abstract class Book  extends Document {
-	def auteur : String;
-	def nombre_pages: Int;
+class Book (_auteur : String, _nombre_pages: Int, _titre: String, _num_enregistrement : Int) extends Document (_titre: String, _num_enregistrement : Int){
+	val auteur = _auteur;
+	val nombre_pages = _nombre_pages;
 }
 
-abstract class Dictionnary  extends Document {
-	def langue : String;
-	def  nombre_tomes: Int
+class Dictionnary(_langue : String, _nombre_tomes : Int, _titre: String, _num_enregistrement : Int)  extends Document (_titre: String, _num_enregistrement : Int) {
+	val langue : String = _langue;
+	val  nombre_tomes: Int = _nombre_tomes;
 }
 
 object Library{
 	def main (args :Array[String]) = {
-		val t = new Book {
-			def auteur = "thomas"
-			def nombre_pages = 1
-			def num_enregistrement = 1;
-			def titre = "une longue histoire"
-		}
+		val t = new Book(_auteur = "Thomas", _nombre_pages = 13, _num_enregistrement =  1000, _titre = "rush zergling");
+		println(t.auteur + " " + t.nombre_pages + " " + t.num_enregistrement + " " + t.titre);
 	}
 }
