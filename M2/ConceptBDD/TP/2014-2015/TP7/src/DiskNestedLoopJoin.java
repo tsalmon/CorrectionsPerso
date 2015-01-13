@@ -72,6 +72,7 @@ public class DiskNestedLoopJoin {
 		System.out.println("---- ALL(SUFFLE) -----");
 		this.print_arraydim1(all_files);
 		
+		
 		int k = 0;
 		for(int i = 0; i < all_files.length; i+=10){
 			this.exportFile(all_files, "RS"+(k++), i, i+10);

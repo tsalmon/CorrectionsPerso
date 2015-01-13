@@ -1,0 +1,7 @@
+rid = indice de tableaux
+
+jointure de hashage pour equi jointure
+
+Hashmap ne supporte pas les doublons
+
+acceder case tab assoc : par sa valeur

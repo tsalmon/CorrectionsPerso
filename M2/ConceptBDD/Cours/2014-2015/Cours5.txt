@@ -1,0 +1,40 @@
+Les tableaux java sont ils de type classe ?
+
+Que signifie le trigramme EMF ?
+
+Le MOF a t?il combien de niveau ?
+
+Quel est le meta mod?le d?une carte routi?re ?
+
+Que signifie EMOF ?
+
+Quel est le nom du m?ta mod?le EMF ?
+
+Que repr?sente cette ic?ne?:? ?
+
+Emmanuel fuchs Conception Avanc?e de Base de Donn?es
+
+Quizz 5
+
+Dans Ecore, quel est le nom de l?association entre
+Eclass et Eattribute ?
+
+Quelle la diff?rence entre Introspection et
+Reflection ?
+
+Citez le nom d?un framework Java qui utilise l?
+introspection ?
+
+Qu?est ce qu?un objet an?mique ?
+
+En quelle ann?e a ?t? cr?? le consortium Eclipse ?
+
+Quel est le nom du framework d?IHM d?Eclipse ?
+
+Emmanuel fuchs Conception Avanc?e de Base de Donn?es
+
+Quizz 5
+
+Que signifie le trigramme URI ?
+
+A quoi sert un URI ?
