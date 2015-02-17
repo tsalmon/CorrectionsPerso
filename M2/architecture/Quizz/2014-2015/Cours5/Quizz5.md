@@ -28,7 +28,7 @@ listener
 
 process, thread
 
-### Dans un servlet, un JSP, une EJB, où s’affiche « texte » : System.out.println( "texte" ) ? 
+### Dans un servlet, un JSP, une EJB, où s’affiche « texte » : System.out.println( "texte" ) ?
 
 Dans la sortie standart (la console)
 
@@ -96,14 +96,14 @@ Deploy
 
 Parc
 
-### Que représente cette icône :   ? 
+### Que représente cette icône : ![Image Alt](img/servlet.png)  ?
 
 servlet
 
-### Dans quelle version des servlets le fichier WEB.XML est-il optionnel ? 
+### Dans quelle version des servlets le fichier WEB.XML est-il optionnel ?
 
 Quel est le titre du livre de Clemens Szyperski ?
- 
+
 ### Qu’est ce qu’un WAR ?
 
 Composant packagé
@@ -147,6 +147,7 @@ L’implémentation d’un objet
 com, ejb
 
 ### A quel design pattern correspond cette interface ?
+![Image Alt](img/observer.png)
 
 Observer
 
@@ -170,7 +171,7 @@ non, forcement publique
 
 Marc Fleury
 
-### Que représente cette icône :  ?
+### Que représente cette icône : ![Image Alt](img/xml.png) ?
 
 XML
 
