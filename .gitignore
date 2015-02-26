@@ -1,5 +1,8 @@
 #Eclipse
 .metadata
+.project
+.classpath
+.settings/
 
 # Android
 *.apk
