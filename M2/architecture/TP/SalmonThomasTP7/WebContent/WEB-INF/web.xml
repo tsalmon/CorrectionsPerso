@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>SalmonThomasTP7</display-name>
+  <listener>
+  	<listener-class>AttConListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>Put</servlet-name>
+    <servlet-class>Put</servlet-class>
+    <init-param>
+      <param-name>firstName</param-name>
+      <param-value>Thomas</param-value>
+    </init-param>
+    <init-param>
+      <param-name>lastName</param-name>
+      <param-value>Salmon</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>Get</servlet-name>
+    <servlet-class>Get</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Put</servlet-name>
+    <url-pattern>/Put</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Get</servlet-name>
+    <url-pattern>/Get</url-pattern>
+  </servlet-mapping>
+</web-app>
