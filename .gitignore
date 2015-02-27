@@ -154,3 +154,9 @@ $RECYCLE.BIN/
 *.tmp
 .history
 .cache
+
+#Page
+*.ppt
+
+#Keynote
+*.key
