@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" id="Application_ID" version="6">
+  <display-name>SalmonThomasTP13</display-name>
+  <module>
+    <web>
+      <web-uri>SalmonThomasTP13Web.war</web-uri>
+      <context-root>SalmonThomasTP13Web</context-root>
+    </web>
+  </module>
+  <module>
+    <java>SalmonThomasTP13Client.jar</java>
+  </module>
+  <module>
+    <connector>SalmonThomasTP13Connector.rar</connector>
+  </module>
+  <module>
+    <ejb>SalmonThomasTP13EJB.jar</ejb>
+  </module>
+</application>

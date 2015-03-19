@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>JSF actionListener example</title>
+</h:head>
+<h:body>
+	<h3>JSF actionListener example</h3>
+	 <h2>Bean Method Binding</h2>
+ 
+	<h:form id="theForm">
+ 
+		<h:inputText id="name" 
+				value="#{theBean.name}"/>
+        	
+		<h:commandButton id="UXclick"
+                		 actionListener="#{theBean.actionHook}" 
+                		 action="#{theBean.applicationAction}"
+                		 value="UXclick"/> 
+	</h:form>
+ 
+</h:body>
+</html>
